@@ -12,14 +12,16 @@ namespace AutoCharacterSheet
 {
     public partial class Form1 : Form
     {
+        public int PhysTotal = 0;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void textBox_Name_TextChanged(object sender, EventArgs e)
+        void updatePH(object sender, EventArgs e)
         {
-            label_display_name.Text = "NAME: " + textBox_Name.Text;
+            PhysTotal = (int)Numeric_PH_Base.Value + (int)Numeric_PH_Temp.Value;
+            Numeric_PH_Val.Value = PhysTotal;
         }
     }
 }

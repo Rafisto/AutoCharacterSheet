@@ -18,3 +18,4 @@ C:\Users\vitoi\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.cspr
 C:\Users\vitoi\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.exe
 C:\Users\vitoi\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.pdb
 C:\Users\Rafist0\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.Form1.resources
+C:\Users\vitoi\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.Form1.resources
