@@ -7,3 +7,13 @@ C:\Users\Rafist0\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.cs
 C:\Users\Rafist0\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.csproj.CoreCompileInputs.cache
 C:\Users\Rafist0\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.exe
 C:\Users\Rafist0\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.pdb
+C:\Users\vitoi\source\repos\AutoCharacterSheet\bin\Debug\AutoCharacterSheet.exe.config
+C:\Users\vitoi\source\repos\AutoCharacterSheet\bin\Debug\AutoCharacterSheet.exe
+C:\Users\vitoi\source\repos\AutoCharacterSheet\bin\Debug\AutoCharacterSheet.pdb
+C:\Users\vitoi\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.csproj.AssemblyReference.cache
+C:\Users\vitoi\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.csproj.SuggestedBindingRedirects.cache
+C:\Users\vitoi\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.Properties.Resources.resources
+C:\Users\vitoi\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.csproj.GenerateResource.cache
+C:\Users\vitoi\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.csproj.CoreCompileInputs.cache
+C:\Users\vitoi\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.exe
+C:\Users\vitoi\source\repos\AutoCharacterSheet\obj\Debug\AutoCharacterSheet.pdb
