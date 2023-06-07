@@ -17,9 +17,9 @@ namespace AutoCharacterSheet
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void textBox_Name_TextChanged(object sender, EventArgs e)
         {
-
+            label_display_name.Text = "NAME: " + textBox_Name.Text;
         }
     }
 }
