@@ -30,11 +30,15 @@ namespace AutoCharacterSheet
         private void InitializeComponent()
         {
             this.label_base_parameters = new System.Windows.Forms.Label();
-            this.textBox_Name = new System.Windows.Forms.TextBox();
-            this.textBox_Class = new System.Windows.Forms.TextBox();
             this.numeric_Level = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox_Class = new System.Windows.Forms.ComboBox();
+            this.textBox_Name = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Numeric_SOC_Val = new System.Windows.Forms.NumericUpDown();
+            this.Numeric_WIL_Val = new System.Windows.Forms.NumericUpDown();
+            this.Numeric_MEN_Val = new System.Windows.Forms.NumericUpDown();
+            this.Numeric_PH_Val = new System.Windows.Forms.NumericUpDown();
             this.Numeric_SOC_Temp = new System.Windows.Forms.NumericUpDown();
             this.Numeric_WIL_Temp = new System.Windows.Forms.NumericUpDown();
             this.Numeric_MEN_Temp = new System.Windows.Forms.NumericUpDown();
@@ -44,10 +48,21 @@ namespace AutoCharacterSheet
             this.Numeric_MEN_Base = new System.Windows.Forms.NumericUpDown();
             this.Numeric_PH_Base = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.Numeric_PH_Val = new System.Windows.Forms.NumericUpDown();
+            this.textBox_Base_Info = new System.Windows.Forms.TextBox();
+            this.textBox_AbilityScores = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Pannel_LBA = new System.Windows.Forms.Panel();
+            this.Label_LBAttributes = new System.Windows.Forms.Label();
+            this.Numeric_HPpLVL = new System.Windows.Forms.NumericUpDown();
+            this.Numeric_SPpLVL = new System.Windows.Forms.NumericUpDown();
+            this.Numeric_CSPpLVL = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Level)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_SOC_Val)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_WIL_Val)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_MEN_Val)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_PH_Val)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_SOC_Temp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_WIL_Temp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_MEN_Temp)).BeginInit();
@@ -56,58 +71,70 @@ namespace AutoCharacterSheet
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_WIL_Base)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_MEN_Base)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_PH_Base)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Numeric_PH_Val)).BeginInit();
+            this.Pannel_LBA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_HPpLVL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_SPpLVL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_CSPpLVL)).BeginInit();
             this.SuspendLayout();
             // 
             // label_base_parameters
             // 
             this.label_base_parameters.AutoSize = true;
-            this.label_base_parameters.Location = new System.Drawing.Point(9, 12);
+            this.label_base_parameters.Location = new System.Drawing.Point(7, 12);
+            this.label_base_parameters.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_base_parameters.Name = "label_base_parameters";
-            this.label_base_parameters.Size = new System.Drawing.Size(48, 90);
+            this.label_base_parameters.Size = new System.Drawing.Size(51, 126);
             this.label_base_parameters.TabIndex = 0;
-            this.label_base_parameters.Text = "Name\r\n\r\nClass\r\n\r\nLevel";
-            // 
-            // textBox_Name
-            // 
-            this.textBox_Name.Location = new System.Drawing.Point(71, 12);
-            this.textBox_Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.Size = new System.Drawing.Size(132, 25);
-            this.textBox_Name.TabIndex = 1;
-            // 
-            // textBox_Class
-            // 
-            this.textBox_Class.Location = new System.Drawing.Point(71, 48);
-            this.textBox_Class.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox_Class.Name = "textBox_Class";
-            this.textBox_Class.Size = new System.Drawing.Size(132, 25);
-            this.textBox_Class.TabIndex = 2;
+            this.label_base_parameters.Text = "Name\r\n\r\nClass\r\n\r\nSubclass\r\n\r\nLevel";
             // 
             // numeric_Level
             // 
-            this.numeric_Level.Location = new System.Drawing.Point(71, 84);
-            this.numeric_Level.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numeric_Level.Location = new System.Drawing.Point(76, 118);
+            this.numeric_Level.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.numeric_Level.Name = "numeric_Level";
-            this.numeric_Level.Size = new System.Drawing.Size(40, 25);
+            this.numeric_Level.Size = new System.Drawing.Size(44, 26);
             this.numeric_Level.TabIndex = 3;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.comboBox_Class);
             this.panel1.Controls.Add(this.textBox_Name);
             this.panel1.Controls.Add(this.label_base_parameters);
             this.panel1.Controls.Add(this.numeric_Level);
-            this.panel1.Controls.Add(this.textBox_Class);
-            this.panel1.Location = new System.Drawing.Point(14, 14);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(11, 35);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 129);
+            this.panel1.Size = new System.Drawing.Size(193, 156);
             this.panel1.TabIndex = 4;
+            // 
+            // comboBox_Class
+            // 
+            this.comboBox_Class.Items.AddRange(new object[] {
+            "Grunt",
+            "Heavy Weapons",
+            "Guerrila ",
+            "Sharpshooter"});
+            this.comboBox_Class.Location = new System.Drawing.Point(76, 45);
+            this.comboBox_Class.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.comboBox_Class.Name = "comboBox_Class";
+            this.comboBox_Class.Size = new System.Drawing.Size(100, 26);
+            this.comboBox_Class.TabIndex = 6;
+            // 
+            // textBox_Name
+            // 
+            this.textBox_Name.Location = new System.Drawing.Point(76, 9);
+            this.textBox_Name.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textBox_Name.Name = "textBox_Name";
+            this.textBox_Name.Size = new System.Drawing.Size(100, 26);
+            this.textBox_Name.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.Numeric_SOC_Val);
+            this.panel2.Controls.Add(this.Numeric_WIL_Val);
+            this.panel2.Controls.Add(this.Numeric_MEN_Val);
             this.panel2.Controls.Add(this.Numeric_PH_Val);
             this.panel2.Controls.Add(this.Numeric_SOC_Temp);
             this.panel2.Controls.Add(this.Numeric_WIL_Temp);
@@ -119,97 +146,73 @@ namespace AutoCharacterSheet
             this.panel2.Controls.Add(this.Numeric_PH_Base);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Font = new System.Drawing.Font("Consolas", 10F);
-            this.panel2.Location = new System.Drawing.Point(14, 173);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(11, 241);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(224, 139);
+            this.panel2.Size = new System.Drawing.Size(222, 147);
             this.panel2.TabIndex = 5;
             // 
-            // Numeric_SOC_Temp
+            // Numeric_SOC_Val
             // 
-            this.Numeric_SOC_Temp.Location = new System.Drawing.Point(136, 95);
-            this.Numeric_SOC_Temp.Name = "Numeric_SOC_Temp";
-            this.Numeric_SOC_Temp.Size = new System.Drawing.Size(34, 23);
-            this.Numeric_SOC_Temp.TabIndex = 13;
-            // 
-            // Numeric_WIL_Temp
-            // 
-            this.Numeric_WIL_Temp.Location = new System.Drawing.Point(136, 66);
-            this.Numeric_WIL_Temp.Name = "Numeric_WIL_Temp";
-            this.Numeric_WIL_Temp.Size = new System.Drawing.Size(34, 23);
-            this.Numeric_WIL_Temp.TabIndex = 12;
-            // 
-            // Numeric_MEN_Temp
-            // 
-            this.Numeric_MEN_Temp.Location = new System.Drawing.Point(136, 37);
-            this.Numeric_MEN_Temp.Name = "Numeric_MEN_Temp";
-            this.Numeric_MEN_Temp.Size = new System.Drawing.Size(34, 23);
-            this.Numeric_MEN_Temp.TabIndex = 11;
-            // 
-            // Numeric_PH_Temp
-            // 
-            this.Numeric_PH_Temp.Location = new System.Drawing.Point(136, 8);
-            this.Numeric_PH_Temp.Maximum = new decimal(new int[] {
-            20,
+            this.Numeric_SOC_Val.Location = new System.Drawing.Point(174, 109);
+            this.Numeric_SOC_Val.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Numeric_SOC_Val.Maximum = new decimal(new int[] {
+            1000,
             0,
             0,
             0});
-            this.Numeric_PH_Temp.Minimum = new decimal(new int[] {
-            20,
+            this.Numeric_SOC_Val.Minimum = new decimal(new int[] {
+            1000,
             0,
             0,
             -2147483648});
-            this.Numeric_PH_Temp.Name = "Numeric_PH_Temp";
-            this.Numeric_PH_Temp.Size = new System.Drawing.Size(34, 23);
-            this.Numeric_PH_Temp.TabIndex = 10;
-            this.Numeric_PH_Temp.ValueChanged += new System.EventHandler(this.updatePH);
+            this.Numeric_SOC_Val.Name = "Numeric_SOC_Val";
+            this.Numeric_SOC_Val.ReadOnly = true;
+            this.Numeric_SOC_Val.Size = new System.Drawing.Size(32, 23);
+            this.Numeric_SOC_Val.TabIndex = 16;
             // 
-            // Numeric_SOC_Base
+            // Numeric_WIL_Val
             // 
-            this.Numeric_SOC_Base.Location = new System.Drawing.Point(96, 95);
-            this.Numeric_SOC_Base.Name = "Numeric_SOC_Base";
-            this.Numeric_SOC_Base.Size = new System.Drawing.Size(34, 23);
-            this.Numeric_SOC_Base.TabIndex = 9;
-            // 
-            // Numeric_WIL_Base
-            // 
-            this.Numeric_WIL_Base.Location = new System.Drawing.Point(96, 66);
-            this.Numeric_WIL_Base.Name = "Numeric_WIL_Base";
-            this.Numeric_WIL_Base.Size = new System.Drawing.Size(34, 23);
-            this.Numeric_WIL_Base.TabIndex = 8;
-            // 
-            // Numeric_MEN_Base
-            // 
-            this.Numeric_MEN_Base.Location = new System.Drawing.Point(96, 37);
-            this.Numeric_MEN_Base.Name = "Numeric_MEN_Base";
-            this.Numeric_MEN_Base.Size = new System.Drawing.Size(34, 23);
-            this.Numeric_MEN_Base.TabIndex = 7;
-            // 
-            // Numeric_PH_Base
-            // 
-            this.Numeric_PH_Base.Location = new System.Drawing.Point(96, 8);
-            this.Numeric_PH_Base.Maximum = new decimal(new int[] {
-            5,
+            this.Numeric_WIL_Val.Location = new System.Drawing.Point(174, 80);
+            this.Numeric_WIL_Val.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Numeric_WIL_Val.Maximum = new decimal(new int[] {
+            1000,
             0,
             0,
             0});
-            this.Numeric_PH_Base.Name = "Numeric_PH_Base";
-            this.Numeric_PH_Base.Size = new System.Drawing.Size(34, 23);
-            this.Numeric_PH_Base.TabIndex = 6;
-            this.Numeric_PH_Base.ValueChanged += new System.EventHandler(this.updatePH);
+            this.Numeric_WIL_Val.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.Numeric_WIL_Val.Name = "Numeric_WIL_Val";
+            this.Numeric_WIL_Val.ReadOnly = true;
+            this.Numeric_WIL_Val.Size = new System.Drawing.Size(32, 23);
+            this.Numeric_WIL_Val.TabIndex = 15;
             // 
-            // label1
+            // Numeric_MEN_Val
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 119);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Physical\r\n\r\nMental\r\n\r\nWillpower\r\n\r\nSocial";
+            this.Numeric_MEN_Val.Location = new System.Drawing.Point(174, 46);
+            this.Numeric_MEN_Val.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Numeric_MEN_Val.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.Numeric_MEN_Val.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.Numeric_MEN_Val.Name = "Numeric_MEN_Val";
+            this.Numeric_MEN_Val.ReadOnly = true;
+            this.Numeric_MEN_Val.Size = new System.Drawing.Size(32, 23);
+            this.Numeric_MEN_Val.TabIndex = 6;
             // 
             // Numeric_PH_Val
             // 
-            this.Numeric_PH_Val.Location = new System.Drawing.Point(176, 8);
+            this.Numeric_PH_Val.Location = new System.Drawing.Point(174, 11);
+            this.Numeric_PH_Val.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Numeric_PH_Val.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -221,18 +224,261 @@ namespace AutoCharacterSheet
             0,
             -2147483648});
             this.Numeric_PH_Val.Name = "Numeric_PH_Val";
-            this.Numeric_PH_Val.Size = new System.Drawing.Size(43, 23);
+            this.Numeric_PH_Val.Size = new System.Drawing.Size(32, 23);
             this.Numeric_PH_Val.TabIndex = 14;
+            this.Numeric_PH_Val.ValueChanged += new System.EventHandler(this.updatePH);
+            // 
+            // Numeric_SOC_Temp
+            // 
+            this.Numeric_SOC_Temp.Location = new System.Drawing.Point(133, 109);
+            this.Numeric_SOC_Temp.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Numeric_SOC_Temp.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.Numeric_SOC_Temp.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
+            this.Numeric_SOC_Temp.Name = "Numeric_SOC_Temp";
+            this.Numeric_SOC_Temp.Size = new System.Drawing.Size(37, 23);
+            this.Numeric_SOC_Temp.TabIndex = 13;
+            this.Numeric_SOC_Temp.ValueChanged += new System.EventHandler(this.updateSOC);
+            // 
+            // Numeric_WIL_Temp
+            // 
+            this.Numeric_WIL_Temp.Location = new System.Drawing.Point(133, 80);
+            this.Numeric_WIL_Temp.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Numeric_WIL_Temp.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.Numeric_WIL_Temp.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
+            this.Numeric_WIL_Temp.Name = "Numeric_WIL_Temp";
+            this.Numeric_WIL_Temp.Size = new System.Drawing.Size(37, 23);
+            this.Numeric_WIL_Temp.TabIndex = 12;
+            this.Numeric_WIL_Temp.ValueChanged += new System.EventHandler(this.updateWIL);
+            // 
+            // Numeric_MEN_Temp
+            // 
+            this.Numeric_MEN_Temp.Location = new System.Drawing.Point(133, 45);
+            this.Numeric_MEN_Temp.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Numeric_MEN_Temp.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.Numeric_MEN_Temp.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
+            this.Numeric_MEN_Temp.Name = "Numeric_MEN_Temp";
+            this.Numeric_MEN_Temp.Size = new System.Drawing.Size(37, 23);
+            this.Numeric_MEN_Temp.TabIndex = 11;
+            this.Numeric_MEN_Temp.ValueChanged += new System.EventHandler(this.updateMEN);
+            // 
+            // Numeric_PH_Temp
+            // 
+            this.Numeric_PH_Temp.Location = new System.Drawing.Point(133, 11);
+            this.Numeric_PH_Temp.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Numeric_PH_Temp.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.Numeric_PH_Temp.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
+            this.Numeric_PH_Temp.Name = "Numeric_PH_Temp";
+            this.Numeric_PH_Temp.Size = new System.Drawing.Size(37, 23);
+            this.Numeric_PH_Temp.TabIndex = 10;
+            this.Numeric_PH_Temp.ValueChanged += new System.EventHandler(this.updatePH);
+            // 
+            // Numeric_SOC_Base
+            // 
+            this.Numeric_SOC_Base.Location = new System.Drawing.Point(81, 109);
+            this.Numeric_SOC_Base.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Numeric_SOC_Base.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.Numeric_SOC_Base.Name = "Numeric_SOC_Base";
+            this.Numeric_SOC_Base.Size = new System.Drawing.Size(39, 23);
+            this.Numeric_SOC_Base.TabIndex = 9;
+            this.Numeric_SOC_Base.ValueChanged += new System.EventHandler(this.updateSOC);
+            // 
+            // Numeric_WIL_Base
+            // 
+            this.Numeric_WIL_Base.Location = new System.Drawing.Point(81, 80);
+            this.Numeric_WIL_Base.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Numeric_WIL_Base.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.Numeric_WIL_Base.Name = "Numeric_WIL_Base";
+            this.Numeric_WIL_Base.Size = new System.Drawing.Size(39, 23);
+            this.Numeric_WIL_Base.TabIndex = 8;
+            this.Numeric_WIL_Base.ValueChanged += new System.EventHandler(this.updateWIL);
+            // 
+            // Numeric_MEN_Base
+            // 
+            this.Numeric_MEN_Base.Location = new System.Drawing.Point(81, 45);
+            this.Numeric_MEN_Base.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Numeric_MEN_Base.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.Numeric_MEN_Base.Name = "Numeric_MEN_Base";
+            this.Numeric_MEN_Base.Size = new System.Drawing.Size(39, 23);
+            this.Numeric_MEN_Base.TabIndex = 7;
+            this.Numeric_MEN_Base.ValueChanged += new System.EventHandler(this.updateMEN);
+            // 
+            // Numeric_PH_Base
+            // 
+            this.Numeric_PH_Base.Location = new System.Drawing.Point(81, 11);
+            this.Numeric_PH_Base.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Numeric_PH_Base.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.Numeric_PH_Base.Name = "Numeric_PH_Base";
+            this.Numeric_PH_Base.Size = new System.Drawing.Size(39, 23);
+            this.Numeric_PH_Base.TabIndex = 6;
+            this.Numeric_PH_Base.ValueChanged += new System.EventHandler(this.updatePH);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 11F);
+            this.label1.Location = new System.Drawing.Point(7, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 126);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Physical\r\n\r\nMental\r\n\r\nWillpower\r\n\r\nSocial";
+            // 
+            // textBox_Base_Info
+            // 
+            this.textBox_Base_Info.Location = new System.Drawing.Point(10, 7);
+            this.textBox_Base_Info.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textBox_Base_Info.Name = "textBox_Base_Info";
+            this.textBox_Base_Info.ReadOnly = true;
+            this.textBox_Base_Info.Size = new System.Drawing.Size(122, 26);
+            this.textBox_Base_Info.TabIndex = 6;
+            this.textBox_Base_Info.Tag = "";
+            this.textBox_Base_Info.Text = "Base Character Info";
+            // 
+            // textBox_AbilityScores
+            // 
+            this.textBox_AbilityScores.Location = new System.Drawing.Point(11, 208);
+            this.textBox_AbilityScores.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textBox_AbilityScores.Name = "textBox_AbilityScores";
+            this.textBox_AbilityScores.ReadOnly = true;
+            this.textBox_AbilityScores.Size = new System.Drawing.Size(79, 26);
+            this.textBox_AbilityScores.TabIndex = 7;
+            this.textBox_AbilityScores.Tag = "";
+            this.textBox_AbilityScores.Text = "Ability Scores";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(10, 395);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(122, 26);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Tag = "";
+            this.textBox1.Text = "Level-Based Attributes";
+            // 
+            // Pannel_LBA
+            // 
+            this.Pannel_LBA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Pannel_LBA.Controls.Add(this.Numeric_CSPpLVL);
+            this.Pannel_LBA.Controls.Add(this.Numeric_SPpLVL);
+            this.Pannel_LBA.Controls.Add(this.Numeric_HPpLVL);
+            this.Pannel_LBA.Controls.Add(this.Label_LBAttributes);
+            this.Pannel_LBA.Location = new System.Drawing.Point(10, 427);
+            this.Pannel_LBA.Name = "Pannel_LBA";
+            this.Pannel_LBA.Size = new System.Drawing.Size(200, 143);
+            this.Pannel_LBA.TabIndex = 9;
+            // 
+            // Label_LBAttributes
+            // 
+            this.Label_LBAttributes.AutoSize = true;
+            this.Label_LBAttributes.Location = new System.Drawing.Point(12, 10);
+            this.Label_LBAttributes.Name = "Label_LBAttributes";
+            this.Label_LBAttributes.Size = new System.Drawing.Size(133, 126);
+            this.Label_LBAttributes.TabIndex = 0;
+            this.Label_LBAttributes.Text = "Base HP\r\n\r\nHP/Level\r\n\r\nSkill Points/Level \r\n\r\nCombat Skill Points/Level";
+            // 
+            // Numeric_HPpLVL
+            // 
+            this.Numeric_HPpLVL.Location = new System.Drawing.Point(160, 42);
+            this.Numeric_HPpLVL.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.Numeric_HPpLVL.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.Numeric_HPpLVL.Name = "Numeric_HPpLVL";
+            this.Numeric_HPpLVL.Size = new System.Drawing.Size(34, 26);
+            this.Numeric_HPpLVL.TabIndex = 10;
+            // 
+            // Numeric_SPpLVL
+            // 
+            this.Numeric_SPpLVL.Location = new System.Drawing.Point(160, 77);
+            this.Numeric_SPpLVL.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.Numeric_SPpLVL.Name = "Numeric_SPpLVL";
+            this.Numeric_SPpLVL.Size = new System.Drawing.Size(34, 26);
+            this.Numeric_SPpLVL.TabIndex = 11;
+            // 
+            // Numeric_CSPpLVL
+            // 
+            this.Numeric_CSPpLVL.Location = new System.Drawing.Point(160, 114);
+            this.Numeric_CSPpLVL.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.Numeric_CSPpLVL.Name = "Numeric_CSPpLVL";
+            this.Numeric_CSPpLVL.Size = new System.Drawing.Size(34, 26);
+            this.Numeric_CSPpLVL.TabIndex = 12;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 770);
+            this.ClientSize = new System.Drawing.Size(1325, 770);
+            this.Controls.Add(this.Pannel_LBA);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_AbilityScores);
+            this.Controls.Add(this.textBox_Base_Info);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Consolas", 11F);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "Form1";
             this.Text = "Auto_Character_Sheet";
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Level)).EndInit();
@@ -240,6 +486,10 @@ namespace AutoCharacterSheet
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_SOC_Val)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_WIL_Val)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_MEN_Val)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_PH_Val)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_SOC_Temp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_WIL_Temp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_MEN_Temp)).EndInit();
@@ -248,16 +498,19 @@ namespace AutoCharacterSheet
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_WIL_Base)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_MEN_Base)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_PH_Base)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Numeric_PH_Val)).EndInit();
+            this.Pannel_LBA.ResumeLayout(false);
+            this.Pannel_LBA.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_HPpLVL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_SPpLVL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Numeric_CSPpLVL)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label label_base_parameters;
-        private System.Windows.Forms.TextBox textBox_Name;
-        private System.Windows.Forms.TextBox textBox_Class;
         private System.Windows.Forms.NumericUpDown numeric_Level;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -271,6 +524,19 @@ namespace AutoCharacterSheet
         private System.Windows.Forms.NumericUpDown Numeric_MEN_Base;
         private System.Windows.Forms.NumericUpDown Numeric_PH_Base;
         private System.Windows.Forms.NumericUpDown Numeric_PH_Val;
+        private System.Windows.Forms.ComboBox comboBox_Class;
+        private System.Windows.Forms.TextBox textBox_Name;
+        private System.Windows.Forms.NumericUpDown Numeric_MEN_Val;
+        private System.Windows.Forms.NumericUpDown Numeric_WIL_Val;
+        private System.Windows.Forms.NumericUpDown Numeric_SOC_Val;
+        private System.Windows.Forms.TextBox textBox_Base_Info;
+        private System.Windows.Forms.TextBox textBox_AbilityScores;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel Pannel_LBA;
+        private System.Windows.Forms.Label Label_LBAttributes;
+        private System.Windows.Forms.NumericUpDown Numeric_CSPpLVL;
+        private System.Windows.Forms.NumericUpDown Numeric_SPpLVL;
+        private System.Windows.Forms.NumericUpDown Numeric_HPpLVL;
     }
 }
 
