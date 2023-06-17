@@ -99,42 +99,6 @@ namespace AutoCharacterSheet
                 comboBox_Subclass.Items.Add(specific_subclass);
             }
         }
-
-        private void Numeric_Level_ValueChanged(object sender, EventArgs e)
-        {
-            int Level = (int)Numeric_Level.Value;
-            CurrentClass = comboBox_Class.Text;
-            CurrentSubclass = comboBox_Subclass.Text;
-
-            //TODO: i in the for loop iterates Level numer of times, rather than only the number of times it's supposed to
-
-            if (CurrentClass == "Grunt")
-            {
-                int FeatureIndex = 0;
-                label_ClassFeatureSheet.Text = "";
-                while (Feature_Levels[FeatureIndex] < Level)
-                {
-                    FeatureIndex++;
-                    if (Feature_Levels.Contains(FeatureIndex))
-                    {
-                        label_ClassFeatureSheet.Text += Grunt_Class_Features[FeatureIndex] + "\r\n\r\n";
-
-                    }
-                }
-
-            }
-            if (CurrentSubclass == "Shock Trooper")
-            {
-                {
-                    if (Subclass_Feature_Levels.Contains(Level))
-                        label_SubclassFeatureSheet.Text = "";
-                    for (int i = 0; i < Level; i++)
-                    {
-                        label_SubclassFeatureSheet.Text += Grunt_Shocktrooper_Subclass_Features[i] + "\r\n\r\n";
-                    }
-                }
-            }
-        }
     }
 }
 
