@@ -30,7 +30,7 @@ namespace AutoCharacterSheet
             if (CurrentSubclass == "Medic") RecalculateOutput(Level, label_SubclassFeatureSheet, Subclass_Feature_Levels, Universal_Medic_Sublass_Features);
             if (CurrentSubclass == "Squad Leader") RecalculateOutput(Level, label_SubclassFeatureSheet, Subclass_Feature_Levels, Universal_Squad_Leader_Sublass_Features);
 
-            updateMaxHP(sender, e);
+            CalculateMaxHP();
 
         }
         
